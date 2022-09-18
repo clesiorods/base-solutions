@@ -177,7 +177,7 @@ export function SideBar() {
                         </span>
                     </li>
 
-                    <NavLink data-bs-toggle="" to="/resumo" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
+                    <NavLink data-bs-toggle="" to="/" aria-expanded="true" aria-controls="sidebarDashboards" className=" ">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:home-alt" />
                             <span className=" nav_text"> Resumo </span>
