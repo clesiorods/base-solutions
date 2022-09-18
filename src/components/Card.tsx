@@ -35,7 +35,7 @@ export function Card(props: CardProps) {
                 }
 
                 span {
-                    color: #939aac;
+                    color: #949aa9;
                     font-size: 12px;
                 }
             }
@@ -47,6 +47,20 @@ export function Card(props: CardProps) {
             }
     
         }
+
+        .chart_div {
+            margin: -20px;
+            margin-left: -30px;
+            margin-top: -50px;
+            margin-bottom: -30px;
+        }
+
+        @media screen and (max-width: 800px) {
+            div.card {
+                margin: 8px -14px;
+            }
+        }
+
     `;
 
 

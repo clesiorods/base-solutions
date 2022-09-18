@@ -55,6 +55,33 @@ const NavBar = styled.nav`
           }
         }
     }
+
+
+    @media screen and (max-width: 800px) {
+
+        padding: 0px;
+        margin-bottom: 55px;
+
+        div.navbar {
+
+            top: 0;
+            position: fixed;
+            margin: 0px -26px;
+            border-radius: 7px;
+
+            div {
+                div.div_icon {
+                    display: none;
+                }
+
+                div {
+                    div.div_names {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
 `;
 
 
@@ -63,37 +90,40 @@ export function TopBar() {
         <NavBar>
             <div className="navbar">
                 <div className="d-flex flex-row side_01">
-                    <div className="">
+                    <div className="stile_menu">
+                        <NavIcon style={{ fontSize: '28px' }} className="icon" icon="eva:menu-fill" />
+                    </div>
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '22px' }} className="icon" icon="uil:envelope-alt" />
                     </div>
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '21.5px' }} className="icon" icon="uil:comment-alt" />
                     </div>
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '21.5px' }} className="icon" icon="uil:check-square" />
                     </div>
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '21.5px' }} className="icon" icon="uil:calender" />
                     </div>
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '21.5px' }} className="icon" icon="uil:star" />
                     </div>
                 </div>
                 <div className="d-flex flex-row">
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '23px' }} className="icon" icon="uil:sun" />
                     </div>
                     <div className="">
                         <NavIcon style={{ fontSize: '22px' }} className="icon" icon="uil:search" />
                     </div>
-                    <div className="">
+                    <div className="div_icon">
                         <NavIcon style={{ fontSize: '22px' }} className="icon" icon="uil:shopping-cart" />
                     </div>
                     <div className="">
                         <NavIcon style={{ fontSize: '22px' }} className="icon" icon="uil:bell" />
                     </div>
                     <div className="profile">
-                        <div>
+                        <div className="div_names">
                             <h5>João Paulo</h5>
                             <h6>admin</h6>
                         </div>

@@ -33,7 +33,7 @@ export function Footer() {
                             <Link className="link" to="">About</Link>&nbsp;
                             <Link className="link" to="">Support</Link>&nbsp;
                             <Link className="link" to="">Contact Us</Link>&nbsp;
-                            <a className="a" target="_blank"
+                            <a className="a" target="_blank" rel="noopener noreferrer"
                                 href="https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-4/dashboard/ecommerce">Base</a>&nbsp;
                         </div>
                     </div>
