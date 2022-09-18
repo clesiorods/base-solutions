@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Nav = styled.nav`
     background-color: #283046;
     height: 100vh;
-    width: 280px;
+    width: 316px;
     transition: .3s all;
     padding: 16px;
 
@@ -161,7 +161,7 @@ export function SideBar() {
                     <span className="brand-logo">
                         <img className='main_logo' src="https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-4/static/media/logo.f03f8d4d.svg" alt="logo" />
                     </span>
-                    <h2 className="brand-text mb-0">Vuexy</h2>
+                    <h2 className="brand-text mb-0">Solutions</h2>
                 </div>
                 <div id="pin_icon">
                     <NavIcon style={{ fontSize: '15px' }} className="icon mt-2" icon="akar-icons:pin" />
@@ -173,7 +173,7 @@ export function SideBar() {
 
                     <li>
                         <span className='menu_section'>
-                            FINANCEIRO
+                            VENDAS
                         </span>
                     </li>
 
@@ -187,14 +187,14 @@ export function SideBar() {
                     <NavLink to="/crm" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:graph-bar" />
-                            <span className='nav_text'> CRM </span>
+                            <span className='nav_text'> Gráficos </span>
                         </li>
                     </NavLink>
 
                     <NavLink to="calendar" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:calender" />
-                            <span className='nav_text'> Calendar </span>
+                            <span className='nav_text'> Calendário </span>
                         </li>
                     </NavLink>
 
@@ -207,7 +207,7 @@ export function SideBar() {
 
                     <li>
                         <span className='menu_section'>
-                            VENDAS
+                            APPS
                         </span>
                     </li>
 
@@ -221,28 +221,28 @@ export function SideBar() {
                     <NavLink data-bs-toggle="" to="/sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:store" />
-                            <span className='nav_text'> Ecommerce </span>
+                            <span className='nav_text'> E-commerce </span>
                         </li>
                     </NavLink>
 
                     <NavLink data-bs-toggle="" to="/sidebarTables" aria-expanded="false" aria-controls="sidebarTables" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:clipboard-alt" />
-                            <span className='nav_text'> Tables </span>
+                            <span className='nav_text'> Tabelas </span>
                         </li>
                     </NavLink>
 
                     <NavLink data-bs-toggle="" to="/sidebarMaps" aria-expanded="false" aria-controls="sidebarMaps" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:location-point" />
-                            <span className='nav_text'> Maps </span>
+                            <span className='nav_text'> Mapas </span>
                         </li>
                     </NavLink>
 
                     <NavLink data-bs-toggle="" to="/sidebarMultiLevel" aria-expanded="false" aria-controls="sidebarMultiLevel" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil-folder-plus" />
-                            <span className='nav_text'> Multi Level </span>
+                            <span className='nav_text'> Multinível </span>
                         </li>
                     </NavLink>
                 </ul>

@@ -12,11 +12,12 @@ export function Card(props: CardProps) {
     const CardStyled = styled.div`
 
         padding: 2px;
+        color: #d7dae2;
 
         .card {
             padding: 14px 20px;
-            margin-top: 24px;
-            min-height: ${(180 * props.height) + ((props.height - 1) * 24)}px;
+            margin-top: 26px;
+            min-height: ${(188 * props.height) + ((props.height - 1) * 24)}px;
             border: none;
             border-radius: 5px;
             background-color: #283046;
@@ -34,7 +35,7 @@ export function Card(props: CardProps) {
                 }
 
                 span {
-                    color: #949db4;
+                    color: #939aac;
                     font-size: 12px;
                 }
             }
