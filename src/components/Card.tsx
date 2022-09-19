@@ -17,7 +17,7 @@ export function Card(props: CardProps) {
         .card {
             padding: 14px 20px;
             margin-top: 26px;
-            min-height: ${(188 * props.height) + ((props.height - 1) * 24)}px;
+            min-height: ${(188 * props.height) + ((props.height - 1) * 30)}px;
             border: none;
             border-radius: 5px;
             background-color: #283046;
@@ -50,7 +50,7 @@ export function Card(props: CardProps) {
 
         .chart_div {
             margin: -20px;
-            margin-left: -30px;
+            margin-left: -40px;
             margin-top: -50px;
             margin-bottom: -30px;
         }

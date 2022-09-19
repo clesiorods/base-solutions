@@ -2,7 +2,7 @@ import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 
 
-export function ResumeLineChart() {
+export function MockupLineChart() {
 
     const options: ApexOptions = {
         chart: {
@@ -16,27 +16,10 @@ export function ResumeLineChart() {
             }
         },
 
-        markers: {
-            size: 2.5,
-            colors: undefined,
-            strokeColors: '#fff',
-            strokeWidth: 1,
-            strokeOpacity: 0.9,
-            strokeDashArray: 0,
-            fillOpacity: 1,
-            discrete: [],
-            shape: "circle",
-            radius: 2,
-            offsetX: 0,
-            offsetY: 0,
-            onClick: undefined,
-            onDblClick: undefined,
-            showNullDataPoints: true,
-            hover: {
-              size: 5,
-              sizeOffset: 3
-            }
+        legend: {
+            show: false
         },
+
 
         dataLabels: {
             enabled: false
@@ -94,7 +77,11 @@ export function ResumeLineChart() {
 
     const series = [{
         name: "Desktops",
-        data: [10, 41, 35, 51, 35, 70, 55, 90]
+        data: [10, 41, 35, 51, 35, 70, 55, 60],
+    },
+    {
+        name: "Desktops",
+        data: [0, 31, 25, 41, 15, 50, 65, 40]
     }];
 
     return (
@@ -104,7 +91,7 @@ export function ResumeLineChart() {
             options={options}
             series={series}
             type="line"
-            height={'80%'}
+            height={'120%'}
             width={'100%'}
         />
 

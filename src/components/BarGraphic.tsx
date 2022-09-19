@@ -247,9 +247,9 @@ export function BarGraphic() {
                         {
                             name: 'Expected',
                             value: 6600,
-                            strokeHeight: 13,
-                            strokeWidth: 0,
-                            strokeLineCap: 'round',
+                            strokeHeight: 5,
+                            // strokeWidth: 0,
+                            // strokeLineCap: 'round',
                             strokeColor: '#775DD0'
                         }
                     ]
@@ -302,7 +302,7 @@ export function BarGraphic() {
             options={options}
             series={series}
             type="bar"
-            height={'100%'}
+            height={'200%'}
             width={'100%'}
         />
 

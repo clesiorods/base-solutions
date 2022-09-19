@@ -2,40 +2,33 @@ import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 
 
-export function ResumeLineChart() {
+export function ResumeBarChart() {
 
     const options: ApexOptions = {
+
         chart: {
-            // height: 350,
-            type: 'line',
-            zoom: {
-                enabled: false
-            },
+            type: 'bar',
+            height: 350,
+            stacked: true,
+            stackType: '100%',
             toolbar: {
                 show: false
             }
         },
 
-        markers: {
-            size: 2.5,
-            colors: undefined,
-            strokeColors: '#fff',
-            strokeWidth: 1,
-            strokeOpacity: 0.9,
-            strokeDashArray: 0,
-            fillOpacity: 1,
-            discrete: [],
-            shape: "circle",
-            radius: 2,
-            offsetX: 0,
-            offsetY: 0,
-            onClick: undefined,
-            onDblClick: undefined,
-            showNullDataPoints: true,
-            hover: {
-              size: 5,
-              sizeOffset: 3
+        plotOptions: {
+            bar: {
+                columnWidth: '30%'
             }
+        },
+
+        fill: {
+
+            opacity: 1
+        },
+
+        legend: {
+            show: false
         },
 
         dataLabels: {
@@ -45,11 +38,6 @@ export function ResumeLineChart() {
         tooltip: {
             enabled: false
         },
-
-        stroke: {
-            curve: 'straight'
-        },
-
 
         xaxis: {
             type: 'category',
@@ -89,12 +77,17 @@ export function ResumeLineChart() {
                 }
             },
         }
-
     }
 
     const series = [{
-        name: "Desktops",
-        data: [10, 41, 35, 51, 35, 70, 55, 90]
+        name: 'PRODUCT A',
+        data: [44, 55, 41, 67, 22, 43]
+    }, {
+        name: 'PRODUCT B',
+        data: [13, 23, 20, 8, 13, 27]
+    }, {
+        name: 'PRODUCT C',
+        data: [11, 17, 15, 15, 21, 14]
     }];
 
     return (
@@ -103,7 +96,7 @@ export function ResumeLineChart() {
         <ReactApexChart
             options={options}
             series={series}
-            type="line"
+            type="bar"
             height={'80%'}
             width={'100%'}
         />

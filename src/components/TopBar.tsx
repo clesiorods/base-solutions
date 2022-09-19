@@ -24,6 +24,10 @@ const NavBar = styled.nav`
             margin-top: -8px;
         }
 
+        div.stile_menu {
+            display: none;
+        }
+
         div {
             div {
                 svg {

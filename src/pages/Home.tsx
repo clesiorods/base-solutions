@@ -1,16 +1,18 @@
-
 import styled from "styled-components";
 import { Card } from "../components/Card";
 import { MainFrame } from "../components/MainFrame";
 import { Icon as Iconify } from '@iconify/react'; // Unicons
 import { BarGraphic } from "../components/BarGraphic";
 import { ResumeLineChart } from "../components/ResumeLineChart";
+import { ResumeBarChart } from "../components/ResumeBarChart";
+import { MockupLineChart } from "../components/DashBoard/MockupLineChart";
 
 const DivIcons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     div {
+        justify-content: center;
         display: flex;
         margin-top: 8px;
 
@@ -89,6 +91,18 @@ const CardResume = styled.div`
         font-size: 24px !important;
     }
 `;
+
+const YearSelect = styled.select`
+    color: #7367F0;
+    border-color: #7367F0;
+    background-color: #7267f01a;
+
+    :hover {
+        background-color: #7267f044;
+        color: #9a91ff;
+    }
+`;
+
 
 
 export function Home() {
@@ -169,8 +183,15 @@ export function Home() {
                         <div className="col-md-6">
                             <Card height={1} >
                                 <div className="card-header">
+                                    <CardResume>
+                                        <h4>Vendas</h4>
+                                        <h3>6 mil</h3>
+                                    </CardResume>
                                 </div>
                                 <div className="card-body">
+                                    <div className="chart_div">
+                                        <ResumeBarChart></ResumeBarChart>
+                                    </div>
                                 </div>
                             </Card>
                         </div>
@@ -178,8 +199,8 @@ export function Home() {
                             <Card height={1} >
                                 <div className="card-header">
                                     <CardResume>
-                                        <h4>Vendas</h4>
-                                        <h3>6 mil</h3>
+                                        <h4>Lucro</h4>
+                                        <h3>46 mil</h3>
                                     </CardResume>
                                 </div>
                                 <div className="card-body">
@@ -212,7 +233,22 @@ export function Home() {
                             </span>
                         </div>
                         <div className="card-body">
-                            <BarGraphic></BarGraphic>
+                            <div className=" row">
+                                <div className="col-md-8">
+                                    <BarGraphic></BarGraphic>
+                                </div>
+                                <div className="col-md-4 text-center">
+                                    <YearSelect name="" className="btn" id="">
+                                        <option value="">2022</option>
+                                        <option value="">2021</option>
+                                        <option value="">2020</option>
+                                    </YearSelect>
+                                    <h4 className="mt-4">R$ 331 mil</h4>
+                                    <div className="mr-0 pr-0">
+                                        <MockupLineChart></MockupLineChart>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </Card>
                 </div>
