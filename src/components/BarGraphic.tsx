@@ -285,8 +285,8 @@ export function BarGraphic() {
                         {
                             name: 'Expected',
                             value: 7300,
-                            strokeHeight: 2,
-                            strokeDashArray: 2,
+                            strokeHeight: 5,
+                            // strokeDashArray: 2,
                             strokeColor: '#775DD0'
                         }
                     ]
@@ -302,7 +302,7 @@ export function BarGraphic() {
             options={options}
             series={series}
             type="bar"
-            height={'200%'}
+            height={'287px'}
             width={'100%'}
         />
 

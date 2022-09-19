@@ -73,6 +73,10 @@ const NavBar = styled.nav`
             margin: 0px -26px;
             border-radius: 7px;
 
+            div.stile_menu {
+                display: block;
+            }
+
             div {
                 div.div_icon {
                     display: none;
