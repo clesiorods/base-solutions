@@ -1,8 +1,14 @@
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
+import styled from "styled-components";
 
 
 export function BarGraphic() {
+
+    const DivChart = styled.div`
+        margin-top: -54px;
+        margin-bottom: -40px;
+    `;
 
     const options: ApexOptions = {
         chart: {
@@ -51,11 +57,16 @@ export function BarGraphic() {
 
         legend: {
             position: 'top',
+            fontFamily: 'Montserrat, Helvetica sans-seri',
+            fontSize: '16px',
+            offsetX: 100,
+            offsetY: 0,
             show: true,
             showForSingleSeries: true,
             customLegendItems: ['Actual', 'Expected'],
             markers: {
-                fillColors: ['#00E396', '#775DD0']
+                fillColors: ['#00E396', '#775DD0'],
+                radius: 6
             },
             labels: {
                 colors: ['#ffffff', '#ffffff'],
@@ -177,7 +188,7 @@ export function BarGraphic() {
                         '#B4B7BD',
                     ],
                     fontSize: '12px',
-                    fontFamily: 'Helvetica, Arial, sans-serif',
+                    fontFamily: 'Montserrat, Helvetica sans-seri',
                     fontWeight: 300,
                     cssClass: 'apexcharts-xaxis-label',
                 },
@@ -297,14 +308,15 @@ export function BarGraphic() {
 
     return (
 
-
-        <ReactApexChart
-            options={options}
-            series={series}
-            type="bar"
-            height={'287px'}
-            width={'100%'}
-        />
+        <DivChart>
+            <ReactApexChart
+                options={options}
+                series={series}
+                type="bar"
+                height={'358px'}
+                width={'100%'}
+            />
+        </DivChart>
 
     );
 }

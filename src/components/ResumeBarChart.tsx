@@ -18,7 +18,7 @@ export function ResumeBarChart() {
 
         plotOptions: {
             bar: {
-                columnWidth: '30%'
+                columnWidth: '28%'
             }
         },
 

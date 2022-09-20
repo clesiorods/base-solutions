@@ -15,9 +15,9 @@ export function Card(props: CardProps) {
         color: #d7dae2;
 
         .card {
-            padding: 14px 20px;
-            margin-top: 26px;
-            min-height: ${(188 * props.height) + ((props.height - 1) * 30)}px;
+            padding: 16px 16px;
+            margin-top: 24px;
+            min-height: ${(188 * props.height) + ((props.height - 1) * 28)}px;
             border: none;
             border-radius: 5px;
             background-color: #283046;
@@ -31,12 +31,15 @@ export function Card(props: CardProps) {
 
                 h4 {
                     margin-top: -2px;
+                    margin-left: -8px;
                     font-size: 18px;
+                    color: #b9bdc7;
                 }
 
                 span {
                     color: #949aa9;
                     font-size: 12px;
+                    margin-right: -8px;
                 }
             }
     
@@ -60,6 +63,45 @@ export function Card(props: CardProps) {
                 margin: 8px -14px;
             }
         }
+
+        @media screen and (min-width: 1400px) {
+            padding: 2px;
+            color: #d7dae2;
+
+            .card {
+                padding: 22px 26px;
+                .card-header {
+
+                    h4 {
+                        margin-top: -2px;
+                        margin-left: -8px;
+                        font-size: 20px;
+                        color: #b9bdc7;
+                    }
+
+                    span {
+                        color: #949aa9;
+                        font-size: 14px;
+                        margin-right: -8px;
+                    }
+                }
+        
+        
+                .card-body {
+                    height: 100%;
+                    /* background-color: rgba(150, 156, 166, 0.35); */
+                }
+        
+            }
+
+            .chart_div {
+                margin: -20px;
+                margin-left: -40px;
+                margin-top: -50px;
+                margin-bottom: -30px;
+            }
+        }
+
 
     `;
 

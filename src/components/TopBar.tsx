@@ -90,6 +90,14 @@ const NavBar = styled.nav`
             }
         }
     }
+
+
+    @media screen and (min-width: 1400px) {
+        div.navbar {
+            height: 58px;
+            padding-top: 13px;
+        }
+    }
 `;
 
 

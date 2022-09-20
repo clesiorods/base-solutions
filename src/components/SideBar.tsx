@@ -149,6 +149,70 @@ const Nav = styled.nav`
         width: 0px;
         display: none;
     }
+
+
+    @media screen and (min-width: 1400px) {
+        padding: 20px;
+
+        img.main_logo {
+            height: 26px;
+        }
+
+        h2.brand-text {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-top: 30px;
+            list-style: none;
+            padding: 0px;
+            
+            li {
+                font-size: 17px;
+                padding: 8px 18px;
+                border-radius: 5px;
+                margin-top: 4px;
+                cursor: pointer;
+                transform: .3s all;
+
+                svg {
+                    font-size: 22px !important;
+                }
+            }
+
+            .menu_section {
+                font-size: 10px;
+            }
+
+
+
+
+            .active {
+                li {
+                    background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+                box-shadow: rgba(115, 103, 240, .7) 0px 0px 10px 1px;
+                }
+
+                span {
+                    color: white !important;
+                }
+            }
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #d8d8d8;
+            cursor: pointer;
+        }
+
+
+        .div_menu {
+            /* margin: 24px 16px; */
+        }
+    }
     
 `;
 

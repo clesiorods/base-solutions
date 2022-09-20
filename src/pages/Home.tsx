@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { Card } from "../components/Card";
 import { MainFrame } from "../components/MainFrame";
 import { Icon as Iconify } from '@iconify/react'; // Unicons
-import { BarGraphic } from "../components/BarGraphic";
+import { BarGraphic } from "../components/DashBoard/BarGraphic";
 import { ResumeLineChart } from "../components/ResumeLineChart";
 import { ResumeBarChart } from "../components/ResumeBarChart";
 import { MockupLineChart } from "../components/DashBoard/MockupLineChart";
+import { MockupDonutChart } from "../components/DashBoard/MockupDonutChart";
 
 const DivIcons = styled.div`
     display: grid;
@@ -41,7 +42,7 @@ const DivIcons = styled.div`
         }
 
         span {
-            margin: 0px 8px 0px 12px;
+            margin: -4px 8px 0px 12px;
 
             h5 {
                 font-weight: 600;
@@ -51,7 +52,7 @@ const DivIcons = styled.div`
             }
 
             h6 {
-                font-size: 12px;
+                font-size: 14px;
                 color: #939aac;
             }
         }
@@ -76,6 +77,37 @@ const DivIcons = styled.div`
             }
         }
     }
+
+
+    @media screen and (min-width: 1400px) {
+
+        div {
+            margin-top: 0px;
+
+            div.wrap_icon {
+                height: 54px;
+                width: 54px;
+                border-radius: 26px;
+                padding: 11px 11px;
+            }
+
+            span {
+                margin: -8px 8px 0px 12px;
+
+                h5 {
+                    font-weight: 600;
+                    font-size: 22px;
+                    margin: 16px 0px 0px 0px;
+                    white-space: nowrap;
+                    color: #c8cbd3;
+                }
+
+                h6 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 `;
 
 const CardResume = styled.div`
@@ -89,6 +121,8 @@ const CardResume = styled.div`
     h3 {
         font-weight: 600;
         font-size: 24px !important;
+        font-family: 'Montserrat', Helvetica sans-serif;
+        color: #c8cbd3;
     }
 `;
 
@@ -103,6 +137,62 @@ const YearSelect = styled.select`
     }
 `;
 
+const DivMedal = styled.div`
+    margin-top: -76px;
+    display: grid;
+    grid-template-columns: 1 1;
+
+    div.botao {
+        margin-top: 75px;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100px;
+
+        button {
+            background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+            color: white;
+            white-space: nowrap;
+        }
+
+        span {
+            color: #b2b4bc;
+            white-space: nowrap;
+            margin-left: -1px;
+            font-size: 12px;
+
+            :hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+    
+    img {
+        /* float: right; */
+        right: 0;
+        margin-right: 50px;
+        opacity: .85;
+        position: absolute;
+    }
+
+
+    @media screen and (min-width: 1400px){
+        margin-top: -84px;
+
+        img {
+            margin-right: 70px;
+        }
+
+        div.botao {
+            button {
+                min-width: 160px;
+            }
+            span {
+                margin-left: 26px;
+            }
+        }
+    }
+`;
 
 
 export function Home() {
@@ -113,10 +203,18 @@ export function Home() {
                 <div className="col-md-4">
                     <Card height={1} >
                         <div className="card-header">
-
+                            <h4>
+                                Minhas Metas
+                            </h4>
                         </div>
                         <div className="card-body">
-
+                            <DivMedal>
+                                <div className="botao">
+                                    <button className="btn">Ver Metas</button>
+                                    <span>6 metas este mês</span>
+                                </div>
+                                <img src={require('../assets/medal_meta.png')} alt="Medalha" />
+                            </DivMedal>
                         </div>
                     </Card>
                 </div>
@@ -213,10 +311,18 @@ export function Home() {
                         <div className="col-md-12">
                             <Card height={1} >
                                 <div className="card-header">
-
+                                    <h4>
+                                        Segmentos
+                                    </h4>
                                 </div>
                                 <div className="card-body">
-
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                        </div>
+                                        <div className="col-md-6">
+                                            <MockupDonutChart></MockupDonutChart>
+                                        </div>
+                                    </div>
                                 </div>
                             </Card>
                         </div>
@@ -226,7 +332,7 @@ export function Home() {
                     <Card height={2} >
                         <div className="card-header">
                             <h4>
-                                Últimos seis meses
+                                Últimos meses
                             </h4>
                             <span className="second_info">
                                 Atualizado as 14:55
@@ -261,7 +367,6 @@ export function Home() {
 
                         </div>
                         <div className="card-body">
-
                         </div>
                     </Card>
                 </div>
