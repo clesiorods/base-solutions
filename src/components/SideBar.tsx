@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Nav = styled.nav`
     background-color: #283046;
     height: 100vh;
-    width: 316px;
+    width: 308px;
     transition: .3s all;
     padding: 16px;
 
@@ -37,7 +37,7 @@ const Nav = styled.nav`
     
 
     ul {
-        margin-top: 30px;
+        margin-top: 24px;
         list-style: none;
         font-size: 15px;
         padding: 0px;
@@ -164,12 +164,12 @@ const Nav = styled.nav`
         }
 
         ul {
-            margin-top: 30px;
+            margin-top: 24px;
             list-style: none;
             padding: 0px;
             
             li {
-                font-size: 17px;
+                font-size: 16px;
                 padding: 8px 18px;
                 border-radius: 5px;
                 margin-top: 4px;
@@ -177,7 +177,7 @@ const Nav = styled.nav`
                 transform: .3s all;
 
                 svg {
-                    font-size: 22px !important;
+                    font-size: 21px !important;
                 }
             }
 
@@ -248,12 +248,27 @@ export function SideBar() {
                         </li>
                     </NavLink>
 
+                    <NavLink data-bs-toggle="" to="/financeiro" aria-expanded="false" aria-controls="sidebarCrm" className="">
+                        <li className="">
+                            <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:usd-square" />
+                            <span className='nav_text'> Financeiro </span>
+                        </li>
+                    </NavLink>
+
+                    <NavLink to="/kanban" className="">
+                        <li className="">
+                            <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:minus-path" />
+                            <span className='nav_text'> Kanban </span>
+                        </li>
+                    </NavLink>
+
                     <NavLink to="/crm" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:graph-bar" />
                             <span className='nav_text'> Gráficos </span>
                         </li>
                     </NavLink>
+
 
                     <NavLink to="calendar" className="">
                         <li className="">

@@ -137,19 +137,21 @@ const YearSelect = styled.select`
     }
 `;
 
+
 const DivMedal = styled.div`
     margin-top: -76px;
     display: grid;
     grid-template-columns: 1 1;
 
     div.botao {
+        z-index: 10 !important;
         margin-top: 75px;
         padding-left: 20px;
         padding-right: 20px;
         max-width: 100px;
 
         button {
-            background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+            background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.9));
             color: white;
             white-space: nowrap;
         }
@@ -170,9 +172,16 @@ const DivMedal = styled.div`
     img {
         /* float: right; */
         right: 0;
-        margin-right: 50px;
+        margin-right: 30px;
         opacity: .85;
         position: absolute;
+    }
+
+    @media screen and (max-width: 1000px){
+        img {
+            opacity: .24;
+            margin-right: 16px;
+        }
     }
 
 
@@ -180,7 +189,7 @@ const DivMedal = styled.div`
         margin-top: -84px;
 
         img {
-            margin-right: 70px;
+            margin-right: 40px;
         }
 
         div.botao {

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
- 
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -9,7 +9,52 @@ const GlobalStyle = createGlobalStyle`
     font-size: 0.9rem;
     transition: .3s all;
     overflow: hidden;
+    -webkit-font-smoothing: antialiased !important;
+  }
+
+
+  ::-webkit-scrollbar {
+      width: 12px !important;
+      height: 12px !important;
+      transition: .5s all !important;
+  }
+
+  ::-webkit-scrollbar:hover {
+      width: 14px !important;
+      height: 14px !important;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: #545967 !important;
+      border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #8a8a8a !important;
+      border-radius: 10px !important;
+      width: 8px !important;
+      border: 2px solid #545967 !important;
+      transition: .5s all !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background-color: #cdcdcd !important;
+      width: 10px !important;
+  }
+
+
+  body::-webkit-scrollbar-track {
+      background: white !important;
+      border-radius: 2px;
+  }
+  body::-webkit-scrollbar-thumb {
+      border: 3px solid white !important;
+  }
+
+
+  li::-webkit-scrollbar {
+      display: none;
   }
 `;
- 
+
 export default GlobalStyle;
