@@ -47,6 +47,10 @@ export function CardLight(props: CardProps) {
                 height: 100%;
                 /* background-color: rgba(150, 156, 166, 0.35); */
             }
+
+            .overflow-x {
+                overflow-x: auto;
+            }
     
         }
 
@@ -91,9 +95,6 @@ export function CardLight(props: CardProps) {
                     /* background-color: rgba(150, 156, 166, 0.35); */
                 }
 
-                .overflow-x {
-                    overflow-x: auto;
-                }
         
             }
 

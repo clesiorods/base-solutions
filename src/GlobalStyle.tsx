@@ -19,27 +19,26 @@ const GlobalStyle = createGlobalStyle`
       transition: .5s all !important;
   }
 
-  ::-webkit-scrollbar:hover {
-      width: 14px !important;
-      height: 14px !important;
-  }
+  /* *:hover::-webkit-scrollbar {
+      width: 24px !important;
+      height: 24px !important;
+  } */
 
   ::-webkit-scrollbar-track {
-      background: #545967 !important;
-      border-radius: 2px;
+      background: #404554 !important;
+      border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
       background-color: #8a8a8a !important;
       border-radius: 10px !important;
       width: 8px !important;
-      border: 2px solid #545967 !important;
+      border: 2px solid #404554 !important;
       transition: .5s all !important;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-      background-color: #cdcdcd !important;
-      width: 10px !important;
+      background-color: #b1b1b1 !important;
   }
 
 
