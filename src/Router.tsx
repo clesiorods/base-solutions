@@ -4,7 +4,7 @@ import { Finance } from "./pages/Finance";
 import { Home } from "./pages/Home";
 import Kanban from "./pages/Kanban";
 import { Login } from "./pages/Login";
-import Teste from "./pages/Teste";
+// import Teste from "./components/Teste";
 
 export function Router() {
   return (
@@ -15,7 +15,7 @@ export function Router() {
       <Route path="/financeiro" element={<Finance />} />
       <Route path="/kanban" element={<Kanban/>} />
       <Route path="/login" element={<Login />} />
-      <Route path="/teste" element={<Teste />} />
+      {/* <Route path="/teste" element={<Teste />} /> */}
     </Routes>
   );
 }

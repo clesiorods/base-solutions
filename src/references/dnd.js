@@ -80,3 +80,5 @@ function Teste() {
 }
 
 export default Teste;
+
+// https://www.codedaily.io/tutorials/Multi-List-Drag-and-Drop-With-react-beautiful-dnd-Immer-and-useReducer

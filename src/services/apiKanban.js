@@ -5,28 +5,28 @@ export function loadLists() {
         creatable: true,
         cards: [
           {
-            id: 1,
+            id: '1',
             content: 'Estudar módulo 01 de NodeJS',
             labels: ['#7159c1'],
             user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png',
             img: ''
           },
           {
-            id: 2,
+            id: '2',
             content: 'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
             labels: ['#7159c1'],
             user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png',
             img: 'https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-4/static/media/03.1c67b250.jpg'
           },
           {
-            id: 3,
+            id: '3',
             content: 'Estudar módulo 03 de React Native',
             labels: ['#7159c1'],
             user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png',
             img: ''
           },
           {
-            id: 4,
+            id: '4',
             content: 'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
             labels: ['#54e1f7'],
             user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png',

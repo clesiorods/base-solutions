@@ -54,6 +54,11 @@ const GlobalStyle = createGlobalStyle`
   li::-webkit-scrollbar {
       display: none;
   }
+
+  li {
+    list-style: none;
+  }
+
 `;
 
 export default GlobalStyle;
