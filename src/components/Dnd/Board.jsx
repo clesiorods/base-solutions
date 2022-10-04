@@ -54,7 +54,7 @@ function Board() {
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="characters">
             {(provided) => (
-              <ul className="" {...provided.droppableProps} ref={provided.innerRef}>
+              <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
 
 
                 {characters.map((card, index) => {
