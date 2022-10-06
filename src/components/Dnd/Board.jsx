@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Icon } from "@iconify/react";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { loadLists } from '../../services/apiKanban';
-import './App.css';
+// import './App.css';
 import styled from "styled-components"
 import Card from './Card';
 import { CardLight } from '../CardLight';

@@ -59,6 +59,23 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+
+  @media screen and (max-width: 800px) {
+    ::-webkit-scrollbar {
+      width: 4px !important;
+      height: 4px !important;
+    }
+    ::-webkit-scrollbar-track {
+      background: #4045543a !important;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #bebebe45 !important;
+      border: none !important;
+
+
+  }
+  }
+
 `;
 
 export default GlobalStyle;

@@ -10,7 +10,7 @@ export function Router() {
   return (
     <Routes>
       <Route path="/resumo" element={<Home />} />
-      <Route path="/" element={<Navigate to="/resumo" />} />
+      <Route path="/" element={<Navigate to="/login" />} />
       <Route path="/crm" element={<Crm />} />
       <Route path="/financeiro" element={<Finance />} />
       <Route path="/kanban" element={<Kanban/>} />

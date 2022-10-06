@@ -25,6 +25,7 @@ const NavBar = styled.nav`
         }
 
         div.stile_menu {
+            margin-top: 4px;
             display: none;
         }
 
@@ -71,7 +72,7 @@ const NavBar = styled.nav`
             top: 0;
             position: fixed;
             margin: 0px -26px;
-            border-radius: 7px;
+            border-radius: 2px;
 
             div.stile_menu {
                 display: block;
