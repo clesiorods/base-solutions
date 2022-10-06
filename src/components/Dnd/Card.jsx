@@ -1,17 +1,14 @@
 import { Icon } from "@iconify/react";
 import styled from "styled-components"
 
-interface cardProps {
-    badgeColor: string;
-    data: any;
-}
 
-const Container = styled.div`
+const List = styled.div`
     /* position: relative; */
     background-color: #283046;
     border-radius: .428rem;
     margin-bottom: 12px;
     padding: 0px 15px 15px 15px;
+    width: 100%;
     cursor: grab;
 
     .content {
@@ -21,7 +18,7 @@ const Container = styled.div`
             color: #B9BDC7;
         }
         img {
-            width: 290px;
+            width: 260px;
             border-radius: .228rem;
         }
     }
@@ -62,9 +59,7 @@ const Container = styled.div`
 `;
 
 
-
-
-export default function Card(props: cardProps) {
+export default function Card(props) {
 
     const Label = styled.span`
         font-size: 12px;
@@ -75,10 +70,10 @@ export default function Card(props: cardProps) {
     `;
 
     return (
-        <Container>
+        <List>
             <header>
                 {
-                    props.data.labels.map((label: string) => {
+                    props.data.labels.map((label) => {
                         return <Label className="badge" key={label} color={label} >#tag</Label>
                     })
                 }
@@ -104,6 +99,6 @@ export default function Card(props: cardProps) {
                     {props.data.user && <img src={require('./../../assets/photo_profile_default.jpg')} alt="Avatar" />}
                 </div>
             </div>
-        </Container>
+        </List>
     )
 }

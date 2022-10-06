@@ -15,7 +15,7 @@ export function CardLight(props: CardProps) {
 
         .card {
             padding: 0px 8px;
-            margin-top: -6px;
+            margin-top: 0px;
             min-height: ${(188 * props.height) + ((props.height - 1) * 28)}px;
             border: none;
             border-radius: 5px;
