@@ -30,7 +30,7 @@
 } */
 
 .droppable-area li {
-  display: flex;
+  /* display: flex; */
   /* align-items: center;
   border-radius: .2em; */
 }

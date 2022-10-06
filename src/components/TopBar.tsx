@@ -12,12 +12,12 @@ const NavBar = styled.nav`
     /* margin-bottom: 24px; */
     
     div.navbar {
-        height: 63px;
+        height: 53px;
         background-color: #7367f0;
         border-radius: 6px;
         margin: 0px 2px;
         width: 100%;
-        padding: 16px;
+        padding: 10px 16px;
         box-shadow: 0px -30px 42px #101628;
 
         div.side_01 {

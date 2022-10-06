@@ -10,9 +10,7 @@ import { CardLight } from '../CardLight';
 const dados = loadLists()[0];
 
 
-
 function Board() {
-
 
   const List = styled.div`
     padding:  0px 30px 0px 0px;
@@ -25,10 +23,12 @@ function Board() {
         align-items: center;
         height: 42px;
         color: white;
+        padding-top: 2px;
         h2 {
             font-size: 16px;
             font-weight: 500;
             padding: 0 10px;
+            padding-top: 12px;
         }
         button {
             color: #696a6e;
@@ -45,9 +45,7 @@ function Board() {
     }
   `;
 
-
   const [characters, updateCharacters] = useState(dados.cards);
-
 
   function handleOnDragEnd(result) {
     if (!result.destination) return;
@@ -62,6 +60,7 @@ function Board() {
   return (
     <CardLight>
       <DragDropContext onDragEnd={handleOnDragEnd}>
+        
         <Droppable droppableId={dados.id_lista}>
           {(provided) => (
             <List className={`${dados.id_lista} droppable-area`} {...provided.droppableProps} ref={provided.innerRef}>
@@ -80,7 +79,7 @@ function Board() {
                   return (
                     <Draggable key={card.id} draggableId={card.id} index={index}>
                       {(provided) => (
-                        <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                        <li className='d-flex' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                           <Card badgeColor={"red"} key={card.id} data={card} >
                             {card.content}
                           </Card>
