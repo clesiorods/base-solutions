@@ -8,9 +8,9 @@ const TelaLogin = styled.div`
     display: flex;
     color: #e6e6e8;
 
-    * {
-        transition: .2s all;
-    }
+    /* * {
+        transition: .1s all !important;
+    } */
 
     header {
         z-index: 10;
@@ -19,7 +19,7 @@ const TelaLogin = styled.div`
         display: flex;
         justify-content: start;
         h2.brand-text {
-            font-size: 21px;
+            font-size: 24px;
             font-weight: 600;
             color: rgb(115,103,240);
             padding-left: 14px;
@@ -96,26 +96,12 @@ const TelaLogin = styled.div`
     }
 
     @media screen and (max-width: 800px) {
-        display: block;
-        overflow-y: auto;
-        overflow-x: hidden;
         div#login_illustration {
-            width: 100vw;
-            min-height: 30vh;
-            display: flex;
-            img {
-                max-width: 70%;
-                max-height: 70%;
-                margin: 10% auto;
-            }
+        width: 100vw;
+        img {
+            width: 90%;
         }
-        div#login_form {
-            width: 100vw;
-            height: 60vh;
-            h2 {
-                margin-top: -20px;
-            }
-        }
+    }
     }
 `;
 
