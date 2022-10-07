@@ -8,25 +8,61 @@ const TelaLogin = styled.div`
     display: flex;
     color: #e6e6e8;
 
-    div#login_illustration {
-        width: 67vw;
+    * {
+        transition: .2s all;
+    }
+
+    header {
+        z-index: 10;
+        position: fixed;
+        padding: 16px 20px;
         display: flex;
+        justify-content: start;
+        h2.brand-text {
+            font-size: 21px;
+            font-weight: 600;
+            color: rgb(115,103,240);
+            padding-left: 14px;
+        }
+        img#logo {
+            height: 24px;
+            margin: 0px;
+            width: unset;
+        }
+    }
+
+    div#login_illustration {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
         img {
             margin: auto;
-            width: 60%;
+            width: 55%;
+            opacity: .4;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
         }
     }
 
     div#login_form {
-        background-color: #283046;
-        width: 33vw;
-        min-width: 300px;
+        position: absolute;
+        background-color: #181d2aa8;
+        width: 100%;
+        height: 100%;
         display: flex;
+        
         form#form_login {
+            box-shadow: 1px 1px 30px #14161bc0;
             margin: auto;
-            width: 70%;
-            padding-bottom: 20px;
-            /* background-color: #ff00003a; */
+            width: 400px;
+            padding: 60px 30px 80px;
+            background-color: #283046;
+            border-radius: 8px;
+
+            :hover {
+                box-shadow: 1px 1px 15px #14161be9;
+            }
+
             h2 {
                 color: #d0d2d6;
                 font-size: 1.72rem;
@@ -86,12 +122,16 @@ const TelaLogin = styled.div`
 export function Login() {
     return (
         <TelaLogin>
+            <header>
+                <img id="logo" src={require('../assets/logo.png')} alt="Logo" />
+                <h2 className="brand-text mb-0">Solutions</h2>
+            </header>
             <div id="login_illustration">
                 <img src={require('../assets/login_illustration.png')} alt="Medalha" />
             </div>
             <div id="login_form">
                 <form id="form_login" action="" className="form">
-                    <h2>Bem-Vindo ao Solutions</h2>
+                    <h2>Bem-Vindo ao <br /> Solutions <span style={{ fontSize: '22px' }}>👋</span></h2>
                     <div className="form-group">
                         <label htmlFor="">Email</label>
                         <input placeholder="exemplo@exemplo.com" className="form-control" type="email" />
@@ -104,7 +144,7 @@ export function Login() {
                         <input placeholder="senha" className="form-control" type="password" />
                     </div>
                     <div className="form-check mb-1 mt-2">
-                        <input style={{width: '18px', height: '18px', marginTop: '1px', marginRight: '6px'}} id="remember-me" type="checkbox" className="form-check-input" />
+                        <input style={{ width: '18px', height: '18px', marginTop: '1px', marginRight: '6px' }} id="remember-me" type="checkbox" className="form-check-input" />
                         <label htmlFor="remember-me" className="form-check-label form-label">Lembrar minha senha</label>
                     </div>
                     <Link to="/resumo">

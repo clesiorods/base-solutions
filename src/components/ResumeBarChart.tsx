@@ -8,7 +8,6 @@ export function ResumeBarChart() {
 
         chart: {
             type: 'bar',
-            height: 350,
             stacked: true,
             stackType: '100%',
             toolbar: {
@@ -18,7 +17,8 @@ export function ResumeBarChart() {
 
         plotOptions: {
             bar: {
-                columnWidth: '28%'
+                columnWidth: '28px',
+                borderRadius: 5
             }
         },
 
@@ -97,7 +97,7 @@ export function ResumeBarChart() {
             options={options}
             series={series}
             type="bar"
-            height={'80%'}
+            height={'70%'}
             width={'100%'}
         />
 

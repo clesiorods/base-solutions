@@ -295,7 +295,7 @@ export function Home() {
                                         <h3>6 mil</h3>
                                     </CardResume>
                                 </div>
-                                <div className="card-body">
+                                <div style={{marginTop: '10px'}} className="card-body">
                                     <div className="chart_div">
                                         <ResumeBarChart></ResumeBarChart>
                                     </div>

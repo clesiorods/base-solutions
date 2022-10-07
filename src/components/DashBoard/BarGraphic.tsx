@@ -44,7 +44,8 @@ export function BarGraphic() {
 
         plotOptions: {
             bar: {
-                columnWidth: '30%'
+                columnWidth: '30%',
+                borderRadius: 7
             }
         },
 

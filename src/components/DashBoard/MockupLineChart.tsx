@@ -30,7 +30,8 @@ export function MockupLineChart() {
         },
 
         stroke: {
-            curve: 'straight'
+            curve: 'smooth',
+            width: 4
         },
 
 
