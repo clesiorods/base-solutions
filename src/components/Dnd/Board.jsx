@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Icon } from "@iconify/react";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { loadLists } from '../../services/apiKanban';
-// import './App.css';
 import styled from "styled-components"
 import Card from './Card';
 import { CardLight } from '../CardLight';
+import { novoLoadLists } from '../../services/novaApiKanban';
 
-const dados = loadLists()[0];
+const listas = novoLoadLists().listas;
+const tarefas = novoLoadLists().tarefas;
 
 
 function Board() {
@@ -45,10 +45,23 @@ function Board() {
     }
   `;
 
-  const [characters, updateCharacters] = useState(dados.cards);
+  const [characters, updateCharacters] = useState(tarefas);
 
   function handleOnDragEnd(result) {
+
     if (!result.destination) return;
+
+    let listaOrigem = listas.find(el => el.id_lista === result.source.droppableId);
+    let listaDestino = listas.find(el => el.id_lista === result.destination.droppableId);
+    listaDestino.cards.push(result.draggableId);
+    listaOrigem.cards.splice(listaOrigem.cards.indexOf(result.draggableId), 1);
+
+    setTimeout(() => {
+      console.clear();
+      console.log(listaOrigem);
+      console.log(listaDestino);
+      console.log(result);
+    }, 500)
 
     const items = Array.from(characters);
     const [reorderedItem] = items.splice(result.source.index, 1);
@@ -60,39 +73,53 @@ function Board() {
   return (
     <CardLight>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        
-        <Droppable droppableId={dados.id_lista}>
-          {(provided) => (
-            <List className={`${dados.id_lista} droppable-area`} {...provided.droppableProps} ref={provided.innerRef}>
-              <header>
-                <h2>{dados.title}</h2>
-                {
-                  dados.creatable && (
-                    <button className="btn">
-                      <Icon style={{ fontSize: '20px' }} className="icon" icon="uil:ellipsis-v" />
-                    </button>
-                  )
-                }
-              </header>
-              <ul>
-                {characters.map((card, index) => {
-                  return (
-                    <Draggable key={card.id} draggableId={card.id} index={index}>
-                      {(provided) => (
-                        <li className='d-flex' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                          <Card badgeColor={"red"} key={card.id} data={card} >
-                            {card.content}
-                          </Card>
-                        </li>
-                      )}
-                    </Draggable>
-                  );
-                })}
-                {provided.placeholder}
-              </ul>
-            </List>
-          )}
-        </Droppable>
+        <div className='d-flex'>
+          {listas.map((lista, index) => {
+            return (
+              <Droppable droppableId={lista.id_lista}>
+                {(provided) => (
+                  <List className={`${lista.id_lista} droppable-area`} {...provided.droppableProps} ref={provided.innerRef}>
+                    <header>
+                      <h2>{lista.title}</h2>
+                      {
+                        lista.creatable && (
+                          <button className="btn">
+                            <Icon style={{ fontSize: '20px' }} className="icon" icon="uil:ellipsis-v" />
+                          </button>
+                        )
+                      }
+                    </header>
+                    <ul>
+                      {characters.map((card, index) => {
+
+                        if(lista.cards.includes(card.id)) {
+                          return (
+                            <Draggable key={card.id} draggableId={card.id} index={index}>
+                              {(provided) => (
+                                <li className='d-flex' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                  <Card badgeColor={"red"} key={card.id} data={card} >
+                                    {card.content}
+                                  </Card>
+                                </li>
+                              )}
+                            </Draggable>
+                          );
+                        } else {
+                          return('');
+                        }
+
+
+
+
+                      })}
+                      {provided.placeholder}
+                    </ul>
+                  </List>
+                )}
+              </Droppable>
+            );
+          })}
+        </div>
       </DragDropContext>
     </CardLight>
   );

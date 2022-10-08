@@ -18,7 +18,7 @@ const List = styled.div`
             color: #B9BDC7;
         }
         img {
-            width: 260px;
+            width: 100%;
             border-radius: .228rem;
         }
     }
