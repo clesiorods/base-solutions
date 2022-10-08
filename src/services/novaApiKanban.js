@@ -1,4 +1,4 @@
-export function novoLoadLists() {
+export function apiKanban() {
   return {
     listas: [
       {

@@ -4,10 +4,10 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from "styled-components"
 import Card from './Card';
 import { CardLight } from '../CardLight';
-import { novoLoadLists } from '../../services/novaApiKanban';
+import { apiKanban } from '../../services/novaApiKanban';
 
-const listas = novoLoadLists().listas;
-const tarefas = novoLoadLists().tarefas;
+const listas = apiKanban().listas;
+const tarefas = apiKanban().tarefas;
 
 
 function Board() {
@@ -45,29 +45,31 @@ function Board() {
     }
   `;
 
-  const [characters, updateCharacters] = useState(tarefas);
+  const [tafetaState, setTafetaState] = useState(tarefas);
 
   function handleOnDragEnd(result) {
 
     if (!result.destination) return;
 
     let listaOrigem = listas.find(el => el.id_lista === result.source.droppableId);
+    let indexListaOrigem = listas.findIndex((list) => list.id_lista === result.source.droppableId);
+
     let listaDestino = listas.find(el => el.id_lista === result.destination.droppableId);
+    let indexListaDestino = listas.findIndex((list) => list.id_lista === result.destination.droppableId);
+
     listaDestino.cards.push(result.draggableId);
     listaOrigem.cards.splice(listaOrigem.cards.indexOf(result.draggableId), 1);
 
-    setTimeout(() => {
-      console.clear();
-      console.log(listaOrigem);
-      console.log(listaDestino);
-      console.log(result);
-    }, 500)
+    let ajuste = 0;
+    if(indexListaOrigem < indexListaDestino) {
+      ajuste = -1;
+    }
 
-    const items = Array.from(characters);
+    const items = Array.from(tafetaState);
     const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
+    items.splice(result.destination.index+ajuste, 0, reorderedItem);
 
-    updateCharacters(items);
+    setTafetaState(items);
   }
 
   return (
@@ -90,8 +92,7 @@ function Board() {
                       }
                     </header>
                     <ul>
-                      {characters.map((card, index) => {
-
+                      {tafetaState.map((card, index) => {
                         if(lista.cards.includes(card.id)) {
                           return (
                             <Draggable key={card.id} draggableId={card.id} index={index}>
@@ -107,10 +108,6 @@ function Board() {
                         } else {
                           return('');
                         }
-
-
-
-
                       })}
                       {provided.placeholder}
                     </ul>
