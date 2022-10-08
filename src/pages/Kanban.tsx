@@ -1,5 +1,5 @@
 import { CardLight } from "../components/CardLight";
-import Board from "../components/Dnd/Board";
+import Board from "../components/Kanban/Board";
 import { MainFrame } from "../components/MainFrame";
 
 

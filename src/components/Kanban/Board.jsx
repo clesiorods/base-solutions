@@ -4,7 +4,7 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from "styled-components"
 import Card from './Card';
 import { CardLight } from '../CardLight';
-import { apiKanban } from '../../services/novaApiKanban';
+import { apiKanban } from '../../services/ApiKanban';
 
 const listas = apiKanban().listas;
 const tarefas = apiKanban().tarefas;
@@ -53,7 +53,6 @@ function Board() {
 
     let listaOrigem = listas.find(el => el.id_lista === result.source.droppableId);
     let indexListaOrigem = listas.findIndex((list) => list.id_lista === result.source.droppableId);
-
     let listaDestino = listas.find(el => el.id_lista === result.destination.droppableId);
     let indexListaDestino = listas.findIndex((list) => list.id_lista === result.destination.droppableId);
 
@@ -75,7 +74,7 @@ function Board() {
   return (
     <CardLight>
       <DragDropContext onDragEnd={handleOnDragEnd}>
-        <div className='d-flex'>
+        <div className='d-flex mt-1'>
           {listas.map((lista, index) => {
             return (
               <Droppable droppableId={lista.id_lista}>
