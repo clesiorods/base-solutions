@@ -7,6 +7,7 @@ import { ResumeLineChart } from "../components/ResumeLineChart";
 import { ResumeBarChart } from "../components/ResumeBarChart";
 import { MockupLineChart } from "../components/DashBoard/MockupLineChart";
 import { MockupDonutChart } from "../components/DashBoard/MockupDonutChart";
+import DataTable from "../components/DataTable/DataTable";
 
 const DivIcons = styled.div`
     display: grid;
@@ -372,11 +373,10 @@ export function Home() {
             <div className="row">
                 <div className="col-md-8">
                     <Card height={2.3} >
-                        <div className="card-header">
+                        {/* <div className="card-header">
 
-                        </div>
-                        <div className="card-body">
-                        </div>
+                        </div> */}
+                            <DataTable />
                     </Card>
                 </div>
                 <div className="col-md-4">

@@ -8,10 +8,6 @@ const TelaLogin = styled.div`
     display: flex;
     color: #e6e6e8;
 
-    /* * {
-        transition: .1s all !important;
-    } */
-
     header {
         z-index: 10;
         position: fixed;
@@ -97,11 +93,14 @@ const TelaLogin = styled.div`
 
     @media screen and (max-width: 800px) {
         div#login_illustration {
-        width: 100vw;
-        img {
-            width: 90%;
+            width: 100vw;
+            img {
+                width: 90%;
+            }
         }
-    }
+        form#form_login {
+            max-width: 90vw;
+        }
     }
 `;
 

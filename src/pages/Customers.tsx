@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Card } from "../components/Card";
 import { MainFrame } from "../components/MainFrame";
 import { Icon as Iconify } from '@iconify/react'; // Unicons
+import DataTable from "../components/DataTable/DataTable";
 
 
 
@@ -115,17 +116,16 @@ export default function Customers() {
                     </Card >
                 </div >
             </div >
-            <div className="row">
+            {/* <div className="row">
                 <div className="com-md-12">
                     <Card height={0.6}>
-                        Ola
                     </Card>
                 </div>
-            </div>
+            </div> */}
             <div className="row">
                 <div className="com-md-12">
                     <Card height={3}>
-                        Ola
+                        <DataTable />
                     </Card>
                 </div>
             </div>

@@ -15,7 +15,7 @@ export function Card(props: CardProps) {
         color: #d7dae2;
 
         .card {
-            padding: 16px 16px;
+            /* padding: 16px 16px; */
             margin-top: 24px;
             min-height: ${(188 * props.height) + ((props.height - 1) * 28)}px;
             border: none;
@@ -24,6 +24,8 @@ export function Card(props: CardProps) {
             transition: .3s all;
             
             .card-header {
+                margin: 16px;
+                margin-bottom: 0px;
                 display: flex;
                 justify-content: space-between;
                 background: none;
@@ -45,6 +47,8 @@ export function Card(props: CardProps) {
     
     
             .card-body {
+                margin: 16px;
+                margin-top: 0px;
                 height: 100%;
                 /* background-color: rgba(150, 156, 166, 0.35); */
             }
@@ -69,9 +73,9 @@ export function Card(props: CardProps) {
             color: #d7dae2;
 
             .card {
-                padding: 22px 26px;
+                /* padding: 22px 26px; */
                 .card-header {
-
+                    margin: 22px 26px 0px;
                     h4 {
                         margin-top: -2px;
                         margin-left: -8px;
@@ -88,6 +92,7 @@ export function Card(props: CardProps) {
         
         
                 .card-body {
+                    margin: 0px 26px 22px;
                     height: 100%;
                     /* background-color: rgba(150, 156, 166, 0.35); */
                 }
