@@ -59,7 +59,7 @@ const List = styled.div`
 `;
 
 
-export default function Card(props) {
+export default function Task(props) {
 
     const Label = styled.span`
         font-size: 12px;

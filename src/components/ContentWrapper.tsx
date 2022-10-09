@@ -6,7 +6,7 @@ type CardProps = {
 }
 
 
-export function CardLight(props: CardProps) {
+export function ContentWrapper(props: CardProps) {
 
     const CardStyled = styled.div`
 

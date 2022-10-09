@@ -262,6 +262,13 @@ export function SideBar() {
                         </li>
                     </NavLink>
 
+                    <NavLink to="/clientes" className="">
+                        <li className="">
+                            <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:users-alt" />
+                            <span className='nav_text'> Clientes </span>
+                        </li>
+                    </NavLink>
+
                     <NavLink to="/crm" className="">
                         <li className="">
                             <NavIcon style={{ fontSize: '20px' }} className="icon" icon="uil:graph-bar" />

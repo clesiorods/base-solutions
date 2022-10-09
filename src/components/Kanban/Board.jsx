@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Icon } from "@iconify/react";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from "styled-components"
-import Card from './Card';
-import { CardLight } from '../CardLight';
+import Task from './Task';
+import { ContentWrapper } from '../ContentWrapper';
 import { apiKanban } from '../../services/ApiKanban';
 
 const listas = apiKanban().listas;
@@ -72,7 +72,7 @@ function Board() {
   }
 
   return (
-    <CardLight>
+    <ContentWrapper>
       <DragDropContext onDragEnd={handleOnDragEnd}>
         <div className='d-flex mt-1'>
           {listas.map((lista, index) => {
@@ -97,9 +97,9 @@ function Board() {
                             <Draggable key={card.id} draggableId={card.id} index={index}>
                               {(provided) => (
                                 <li className='d-flex' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                                  <Card badgeColor={"red"} key={card.id} data={card} >
+                                  <Task badgeColor={"red"} key={card.id} data={card} >
                                     {card.content}
-                                  </Card>
+                                  </Task>
                                 </li>
                               )}
                             </Draggable>
@@ -117,7 +117,7 @@ function Board() {
           })}
         </div>
       </DragDropContext>
-    </CardLight>
+    </ContentWrapper>
   );
 }
 
